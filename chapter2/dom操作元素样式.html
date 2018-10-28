@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM操作元素样式</title>
+</head>
+<body>
+    <div>我是一个div,我的样式由JavaScript代码设置</div>
+    <script type="text/javascript">
+       //通过标签名获取文档中的第一个div元素对象
+       var div=document.getElementsByTagName("div")[0];
+       div.style.width="350px";//设置元素的宽
+       div.style.height="350px";//设置元素的高
+       div.style.borderRadius="50%";//设置元素的边框弧度
+       div.style.borderStyle="solid";//设置元素边框样式
+       div.style.borderWidth="1px";//设置元素边框宽度
+       div.style.borderColor="black";//设置元素边框颜色
+       div.style.fontSize="16px";//设置元素的字体大小
+       div.style.fontWeight="bold";//设置元素的字体为粗体
+       div.style.textAlign="center";//设置元素的文本居中
+       div.style.lineHeight="350px";//设置元素的行高
+    </script>
+</body>
+</html>
