@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数据类型和变量</title>
+		<script type="text/javascript">
+			/*
+			 * java 中的数据类型
+			 * 基本数据类型
+			 * 引用数据类型
+			 * 
+			 * JavaScript中的数据类型
+			 * 原始类型    数字 （number）   字符串 （String）  布尔（boolean）  null  undefined
+			 * 
+			 * 双引号和单引号没有区别
+			 * \t 制表符
+			 * \n 换行
+			 * \\ 反斜线
+			 */
+			document.write('<h1 style="color:red">helloWorld</h1>');
+			document.write("<h1 style='color:red'>helloWorld</h1>");
+			
+			document.write("hello \n world");
+			
+			document.writeln();
+			
+			//js实现换行，
+			document.writeln("<br/>");
+			document.write("时间");
+			/*
+			 * 布尔类型只有两个值   true   false
+			 * 一下情况js会当成布尔类型处理
+			 * 0 false
+			 * 1 true
+			 * not null  true
+			 * null   false
+			 * ""  false
+			 */
+			
+			/*if(a==0){
+				alert();
+			}*/
+			
+			/*
+			 * null  undefinded
+			 * 
+			 *   typeof    ...的类型
+			 */
+			
+			//var str="";//string
+			var name=9;//number
+			var sex;//undefined
+			var str=null;//Object
+			
+			alert(typeof str);
+			
+			
+			//number   string    boolean      null    undefined
+			
+			//变量
+			/*
+			   var  var_name =  value
+			   1 变量需要有意义
+			   2 变量区分大小写
+			 * */
+			
+			var number1=3;
+			var sum;
+			var sum,number1;
+			var str2="helloworld";
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
