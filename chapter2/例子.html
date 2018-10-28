@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>案例</title>	
+		<style type="text/css">
+		    .div1{
+		    	width: 200px;
+		    	height: 200px;
+		    	background: red;
+		    	border: 1px solid blue;
+		    }
+		</style>
+	</head>
+	<body>
+		<h1 id="tiltle">这个是网页中的一个标题</h1>
+		<button id="btn">变色</button>
+		<br />
+		<br />
+		<br />
+		<br />
+		
+		<form>
+			<input type="radio" name="sex" value="男"/>男
+			<input type="radio" name="sex" value="女" checked="checked" />女
+			<input type="text" name="username" id="username" value="" />
+		</form>
+		
+		<ul>
+			<li>苹果</li>
+			<li>柿子</li>
+			<li>葡萄</li>
+			<li>石榴</li>
+		</ul>
+		
+		
+		<div class="div1">
+
+		</div>
+		
+		
+		<script type="text/javascript">
+			//把字体改成红色
+			//1 js第一定理   如果你想对那个元素进行操作，需要想办法先获取它
+			//通过ID
+			var otitle=document.getElementById("tiltle");
+			document.write(otitle);
+			//变色;
+			var obtn=document.getElementById("btn");
+			//事件
+			obtn.onclick=function(){
+				//alert(123)
+				otitle.style.color='red';
+			}
+			//通过名字来获取节点
+			var osex=document.getElementsByName("sex");
+			document.write(osex);
+			document.write("<br/>");
+			document.write("NodeList的长度"+osex.length);
+			document.write("<br/>");
+			var one=osex[0];//类似于数组结构
+			
+			var oname=document.getElementsByName("username");
+			document.write(oname);//NodeList
+			
+			//通过标签获取元素
+			//改变葡萄的字体大小
+			var oli=document.getElementsByTagName("li");
+			//判断oli类型
+			document.write(oli);//HTMLCollection
+			//请问葡萄怎么获取    oli[2]
+			oli[2].style.fontSize='36px';
+			
+			//通过类名获取元素
+			//让红色的框变成粉色
+			var odiv=document.getElementsByClassName("div1");
+			document.write(odiv);
+			odiv[0].style.background='pink';
+			
+			
+			/*
+			 * 通过id
+			 * document.getElementById();
+			 * 通过名字
+			 * document.getElementsByName();
+			 * 通过标签
+			 * document.getElementsByTagName();
+			 * 通过类名
+			 * document.getElementsByClassName();
+			 */
+			
+			
+		</script>
+	</body>
+</html>
