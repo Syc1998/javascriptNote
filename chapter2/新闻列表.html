@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>新闻列表</title>
+</head>
+<style>
+  table
+  {
+      border-top:solid 1px black;
+      border-right:solid 1px black;
+  }
+  tbody
+  {
+      padding: 0;
+  }
+  td,th
+  {
+      border-bottom:solid 1px black;
+      border-left:solid 1px black;
+      height: 25px;
+      text-align: center;
+  }
+</style>
+<body>
+    <table id="newsList" cellpadding="0" cellspacing="0">
+            <tr>
+                <th>标题</th>
+                <th>栏目</th>
+                <th>状态</th>
+                <th>发布人</th>
+                <th>点击量</th>
+        </tr>   
+    </table>
+    <script>
+       var table=document.getElementById("newsList");//获取表格
+       //将要插入的行以字符串的形式配置到两个变量中
+       var tr1="<tr><td>买车时是选“低配车”还是“高配车”？</td><td>汽车</td><td>开放浏览</td><td>小莱</td><td>1000</td></tr>";
+       var tr2="<tr><td>专访库里：用正确方式终结比赛</td><td>体育</td><td>开放浏览</td><td>小格</td><td>10000</td></tr>"
+       //通过对表格对象的innerHTML属性的操作修改页面结构
+       table.innerHTML+=tr1+tr2;           
+       //通过tr标签获取所有行对象
+       var rows=table.getElementsByTagName("tr");
+       //找到第一行，配置背景颜色
+       var row1=rows[0];               
+       row1.style.backgroundColor="#cbcbcb";
+       //找到第二行，配置背景颜色
+       var row2=rows[1];
+       row2.style.backgroundColor="#ffeedd";
+       //找到第三行，配置背景颜色
+       var row3=rows[2];
+       row3.style.backgroundColor="#ddeeff";
+    </script>
+</body>
+</html>
