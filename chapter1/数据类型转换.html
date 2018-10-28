@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			document.write(typeof 123);//number
+			document.write("<br/>");
+			document.write(typeof "123");//String
+			var blean=true;
+			document.write("<br/>");
+			document.write(typeof blean);//boolean
+			document.write("<br/>");
+			var flag=null;
+			document.write(typeof flag);//object
+			document.write("<br/>");
+			var config;
+			document.write(typeof config);//undefined
+		
+		//java中
+		//自动类型转换         byte--short--int---long    char---int
+		//强制类型转换         object---Person   String---123
+		
+		/**
+		 * javascript中的类型转换
+		 * 1 字符串转换成数字
+		 * parseInt  整数         paseFloat  小数
+		 * 
+		 * 2 强制类型转换
+		 *  ----number   number();
+		 * 
+		 */
+		document.write("<br/>");
+		var str='123456';//String
+		document.write(str+123);//123456123
+		document.write("<br/>");
+		document.write(parseInt(str)+123);//123579
+
+		var num1='123.456';
+		document.write("<br/>");
+		document.write(typeof num1);
+		document.write("<br/>");	
+		document.write(typeof parseFloat(num1));//number
+		document.write("<br/>");
+		
+		document.write(parseInt("abc"));//NaN  not a number
+		document.write("<br/>");
+		document.write(parseInt("123abc"));
+		document.write("<br/>");
+		
+	    //number
+	    var test="123";
+	    document.write(typeof test);//string
+	    document.write("<br/>");
+	    document.write(typeof Number(test));//number
+	    document.write("<br/>");
+	    document.write(Number('123abc'));//NaN
+	    
+	    //布尔---数字
+	    document.write("<br/>");
+	    document.write(Number(true));//1
+	    document.write("<br/>");
+	    document.write(Number(false));//0
+	    document.write("<br/>");
+	    document.write(Number(null));//0
+	    document.write("<br/>");
+	    document.write(Number(undefined))//NaN
+	    
+	    
+	    //其他类型--布尔   Boolean()
+	    document.write("<br/>");
+	    document.write(Boolean(1));//true;
+	    document.write("<br/>");
+	    document.write(Boolean(0));//false
+	    document.write("<br/>");
+	    document.write(Boolean(""));//false
+	    document.write("<br/>");
+	    document.write(Boolean(null));//false
+	    document.write("<br/>");
+	    document.write(Boolean(undefined));//false
+	    
+	    
+	    //其他类型--string
+	    //number-string    num+"";
+	    document.write("<br/>");
+	    document.write(String(123));//123
+	    document.write("<br/>");
+	    document.write(String(true));//true
+	    document.write("<br/>");
+	    document.write(String(null));//null
+	    document.write("<br/>");
+	    document.write(String(undefined));//undefined
+	    
+	    //number-string
+	    document.write("<br/>");
+	    var num4=19;
+	    document.write(num4.toString(2));
+	    
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
