@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script type="text/javascript">
+		//弹出框
+		alert();//空白的弹出框
+		alert("字符串");//字符串作为参数
+		alert(123);//数字
+//		var name="张三";
+//		alert(name);
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		//输出的内容通过  document.write();输出到页面中
+		document.write('HelloWorld');
+		/**
+		 * document.write()除了可以输出内容以外，还可以输出HTML元素
+		 */
+		document.write("<h1 style='color: red;'>你好世界</h1>");
+	</script>
+</body>
+</html>
