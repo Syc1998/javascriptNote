@@ -1,0 +1,71 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style type="text/css">
+*{margin:0;padding:0}
+li{list-style:none;}
+.ad {margin-bottom:10px;width: 560px;height: 200px;overflow: hidden;position: relative;}
+.slider, .num {position: absolute;}
+.slider li {list-style:none;display: inline;}
+.slider img {width: 560px; height: 200px;display: block;}
+.num {right: 5px;bottom: 5px;}
+ .num li {float: left;color:gray;text-align: center;line-height: 16px;width: 16px;height: 16px;
+font-family: Arial;font-size: 12px;cursor: pointer;overflow: hidden;margin: 3px 1px;
+border: 1px solid gray;background-color: #fff;}
+.num li.on {color: #fff;line-height: 21px;width: 21px;height: 21px;font-size: 16px;margin: 0 1px;
+            border: 0;background-color: gray;font-weight: bold;}
+</style>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var index=0;
+		var timer;
+	$(".num li").mouseover(function() {
+		var index=$(this).index();
+		moveImg(index);
+	}).eq(0).mouseover()
+
+	$(".ad").hover(function() {
+		clearInterval(timer);
+	},function() {
+		timer=setInterval(function() {
+			moveImg(index);
+			index++;
+			if (index==5) {
+				index=0;
+			}
+		},1000)
+	}).trigger("mouseleave")
+	
+	
+	function moveImg (index) {
+		var adHeight=$(".ad").height();
+		$(".slider").stop().animate({"top":-adHeight*index},1000)
+		$(".num li").removeClass("on").eq(index).addClass("on")
+		
+	}
+	})
+</script>
+</head>
+<body>
+<div id="box">
+    <div class="ad">
+        <ul class="slider">
+            <li><img src="img/1.jpg" /></li>
+            <li><img src="img/2.jpg" /></li>
+            <li><img src="img/3.jpg" /></li>
+            <li><img src="img/4.jpg" /></li>
+            <li><img src="img/5.jpg" /></li>
+        </ul>
+        <ul class="num">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
